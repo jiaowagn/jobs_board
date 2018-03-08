@@ -1,8 +1,8 @@
 = simple_form_for @job do |f|
-  = f.collection_select :category_id, Category.all, :id, :name, { promt: "Chose a category" }
-  = f.input :title, label: "Job Title"
-  = f.input :description, label: "Job Description"
-  = f.input :company, label: "Your Company"
-  = f.input :url, label: "Link to Job"
+  = f.collection_select :category_id, Category.all, :id, :name, { promt: "Chose a category" }, input_html: { class: "dropdown-toggle" }
+  = f.input :title, label: "Job Title", input: { class: "form-control" }
+  = f.input :description, label: "Job Description", input: { class: "form-control" }
+  = f.input :company, label: "Your Company", input: { class: "form-control" }
+  = f.input :url, label: "Link to Job", input: { class: "form-control" }
   %br/
   = f.button :submit
